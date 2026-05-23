@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Películas</h1>
+<pre id="out">Cargando...</pre>
+
+<script>
+fetch('/api')
+.then(r=>r.text())
+.then(d=>document.getElementById('out').textContent=d)
+.catch(e=>document.getElementById('out').textContent=e.message)
+</script>
+</body>
+</html>
